@@ -1,0 +1,18 @@
+{
+  "name": "graph-data-structure",
+  "version": "1.0.0",
+  "description": "graph data structure practice",
+  "main": "Graph.js",
+  "scripts": {
+    "test": "jest graph.test.js --watch"
+  },
+  "author": "zach mansell",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^7.20.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jest": "^24.1.5",
+    "jest": "^26.6.3"
+  }
+}
