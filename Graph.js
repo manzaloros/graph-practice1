@@ -81,6 +81,27 @@ class Graph {
       cb(val);
     }
   }
+
+  breadthFirstSearch(val) {
+    const firstNode = Object.values(this.nodes)[0];
+    const queue = [firstNode];
+    const visited = new Map();
+    visited.set(firstNode, true);
+
+    while (queue.length > 0) {
+      const current = queue.shift();
+      for (let i = 0; i < current.edges.length; i += 1) {
+        const node = current.edges[i];
+
+        if (node.val === val) return true;
+        if (!visited.has(node)) {
+          visited.set(node, true);
+          node.edges.forEach((e) => queue.push(e));
+        }
+      }
+    }
+    return false;
+  }
 }
 
 module.exports = Graph;

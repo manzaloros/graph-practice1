@@ -81,4 +81,19 @@ describe('graph', () => {
     expect(graph.hasEdge(3, 5)).toEqual(true);
     expect(graph.hasEdge(5, 5)).toEqual(true);
   });
+
+  it('should visit every node in the graph with a breadth-first search', () => {
+    console.log = jest.fn();
+
+    const connectToFive = (item) => {
+      graph.addEdge(item, 5);
+    };
+    graph.addNode(5);
+    graph.addNode(2);
+    graph.addNode(1);
+    graph.addNode(3);
+    graph.forEachNode(connectToFive);
+
+    expect(graph.breadthFirstSearch(3)).toEqual(true);
+  });
 });
