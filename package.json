@@ -4,7 +4,7 @@
   "description": "graph data structure practice",
   "main": "Graph.js",
   "scripts": {
-    "test": "jest graph.test.js --watch"
+    "test": "jest graph.test.js --watch --verbose"
   },
   "author": "zach mansell",
   "license": "ISC",

@@ -92,6 +92,7 @@ class Graph {
       const current = queue.shift();
       for (let i = 0; i < current.edges.length; i += 1) {
         const node = current.edges[i];
+        console.log(`${node} visited!`);
 
         if (node.val === val) return true;
         if (!visited.has(node)) {
